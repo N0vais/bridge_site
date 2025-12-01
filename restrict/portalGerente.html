@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal-cliente-aluno</title>
+    <link rel="stylesheet" href="/restrict/portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!--navegador da pagina-->
+    <header class="main-header">
+        <div class="container-nav">
+            <div class="hanburger">
+                <a href="#" id="menuToggle"><i class="fas fa-bars"></i></a>
+            </div>
+            <h1 class="logo"><a href="#">BRIDGE PROJECTS</a></h1>
+            <nav class="main-nav-sub" id="menu-opcoes">
+                <div class="search-bar">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <input type="text" placeholder="pesquisa por nome..." id="search-input">
+                </div>
+
+            </nav>
+            <a href="#" class="btn-nav encerrar primary" id="logout-button">Encerrar</a>
+        </div>
+    </header>
+    <!--fim do header navegador-->
+
+    <!--div que vai agrupar o aside e a main-->
+    <div class="portal-container">
+        <!--inicio do menu lateral-->
+        <aside class="sidebar" id="mySidebar">
+
+            <div class="user-profile">
+                <img id="profilePic" src="/restrict/uploads/Images.png" alt="adicione uma foto" class="profile-pic">
+                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <div class="user-info">
+                    <span class="name" id="userName">Daniel S</span>
+                    <span class="title" id="userRole">Gerente </span>
+                </div>
+            </div>
+            <hr class="divisor">
+            <nav class="main-nav">
+                <ul class="nav-section">
+                    <li class="nav-item"><a href="#atividade"><i class="fas fa-history"></i> Atividade</a></li>
+                    <li class="nav-item active"><a href="#mainContent"><i class="fas fa-chart-line"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item"><a href="#menbros"><i class="fas fa-user-friends"></i> Membros</a></li>
+                    <li class="nav-item"><a href="#conpartilhamento"><i
+                                class="fas fa-share-alt"></i>Compartilhamentos</a></li>
+                    <li class="nav-item"><a href="#config"><i class="fas fa-cog"></i> Configurações</a></li>
+
+                    <li class="nav-item"><a href="notificações"><i class="fas fa-bell icon-btn"></i>Notificações</a>
+                    </li>
+                    <li class="nav-item"><a href="menssagens"><i class="fas fa-envelope icon-btn"></i>Menssagens</a>
+                    </li>
+                    <li class="nav-item"><a href="#excluir"><i class="fas fa-trash "></i>Excluir</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <!--fim do aside -->
+
+        <!--inicio do main-->
+        <main class="main-content" id="mainContent">
+
+            <!-- HEADER padrão -->
+            <header class="header">
+                <div class="dashboard-title">Dashboard</div>
+
+            </header>
+
+
+
+            <main class="conteudo">
+
+                <h1 class="titulo">Projetos Gerenciados</h1>
+                <p class="subtitulo">Acompanhe todos os projetos sob sua supervisão.</p>
+
+                <div class="switcher">
+                    <a class="ativo">Projetos</a>
+                    <a href="alunos_gerente.html">Alunos Vinculados</a>
+                    <a href="propostas_gerente.html">Propostas</a>
+                    <a href="historico_gerente.html">Histórico</a>
+                </div>
+
+                <!-- ========================= -->
+                <!-- PROJETO 1 -->
+                <div class="proj-card">
+                    <div class="linha">
+                        <h2>Projeto de Desenvolvimento Web</h2>
+                        <span class="tag">Ativo</span>
+                    </div>
+
+                    <p class="info">Equipe trabalhando na criação da plataforma web. Progresso atualizado semanalmente.
+                    </p>
+
+                    <button class="btn-ver" onclick="location.href='projeto_detalhes.html'">
+                        Ver detalhes
+                    </button>
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="proj-card">
+                    <div class="linha">
+                        <h2>Aplicativo Mobile - Bridge Internships</h2>
+                        <span class="tag">Em andamento</span>
+                    </div>
+
+                    <p class="info">App em desenvolvimento para conexão entre empresas e alunos.</p>
+
+                    <button class="btn-ver" onclick="location.href='projeto_detalhes.html'">
+                        Ver detalhes
+                    </button>
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="proj-card">
+                    <div class="linha">
+                        <h2>Sistema de Gestão Interna</h2>
+                        <span class="tag">Concluído</span>
+                    </div>
+
+                    <p class="info">Ferramenta finalizada para uso interno da instituição.</p>
+
+                    <button class="btn-ver" onclick="location.href='projeto_detalhes.html'">
+                        Ver detalhes
+                    </button>
+                </div>
+
+
+            </main>
+            <!--fim do main-->
+
+    </div>
+    <!--fim da div de agrupamento-->
+
+    <script src="js/homeAluno.js"></script>
+
+</body>
+
+</html>

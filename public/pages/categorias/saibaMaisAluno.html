@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos | Prepare-se para o Futuro!</title>
+
+    <!-- Fontes + Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilo Moderno -->
+    <style>
+       
+        :root {
+    --cor-primaria: #007bff;
+    --cor-secundaria: #004599;
+    --cor-texto: #555;
+    --cor-fundo-destaque: #d4f3d8;
+    --cor-fundo-cabecalho-rodape: #1a202c;
+    --cor-accent: #FFC107;
+    --cor-bg: #fff;
+    --cor-top-tex:#d0c7ed;
+    --cor-fundo-corpo: #f0f2f5;
+    /* Fundo levemente cinza */
+
+    /* Tipografia */
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-corpo: 'Inter', sans-serif;
+
+    /* Espaçamento e Bordas */
+    --border-color: #dee2e6;
+    --espacamento-padrao: 1.0rem;
+    /* 24px */
+    --borda-arredondada-padrao: 12px;
+    --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+        body{
+            margin:0;
+            font-family: "Segoe UI", sans-serif;
+            color: var(--cor-texto);
+            background: var(--cor-fundo-corpo);
+        }
+
+        .hero{
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558021211-6d1403321394?auto=format&fit=crop&w=1500&q=80');
+            background-position:center;
+            background-size:cover;
+            padding:90px 20px;
+            text-align:center;
+            color: var(--cor-bg);
+        }
+
+        .hero h1{
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight:700;
+        }
+
+        .hero p{
+            font-size:1.22rem;
+            font-weight:300;
+            max-width:700px;
+            margin:auto;
+            line-height:1.6;
+        }
+
+        .benefits-section{
+            padding: 50px 20px;
+            max-width:1100px;
+            margin:auto;
+        }
+
+        .benefits-title{
+            text-align:center;
+            font-size:2rem;
+            font-weight:700;
+            margin-bottom:15px;
+            color:var(--cor-secundaria);
+        }
+
+        .benefits-card-container{
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap:25px;
+            margin-top:30px;
+        }
+
+        .benefit-card{
+            background:var(--cor-bg);
+            padding:25px;
+            border-radius:15px;
+            box-shadow:var(--shadow-light);
+            text-align:center;
+            transition:.3s;
+        }
+
+        .benefit-card:hover{
+            transform:translateY(-8px);
+            box-shadow:var(--shadow-light);
+        }
+
+        .benefit-card i{
+            font-size:45px;
+            margin-bottom:10px;
+            color: var(--cor-primaria);
+        }
+
+        .cta-area{
+            text-align:center;
+            padding:45px 20px;
+        }
+
+        .cta-button{
+            background: var(--cor-fundo-cabecalho-rodape);
+            color: var(--cor-bg);
+            padding:15px 35px;
+            border-radius:var(--borda-arredondada-padrao);
+            font-size:1.2rem;
+            font-weight:600;
+            text-decoration:none;
+            transition:.3s;
+        }
+
+        .cta-button:hover{
+            background: var(--cor-secundaria);
+        }
+
+        .note{
+            font-size:0.98rem;
+            margin-top:50px;
+            color:var(--cor-texto);
+        }
+        footer {
+    background: var(--cor-fundo-cabecalho-rodape);
+    color: var(--cor-bg);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+}
+        
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Conquiste Certificações Sem Custo!</h1>
+        <p>Empresas parceiras financiam suas provas para que você se destaque no mercado. Prepare-se para o futuro com oportunidades reais e 100% gratuitas.</p>
+    </section>
+
+    <section class="benefits-section">
+        <h2 class="benefits-title"><i class="fa-solid fa-crown"></i> Benefícios Exclusivos para Alunos</h2>
+
+        <div class="benefits-card-container">
+            
+            <div class="benefit-card">
+                <i class="fa-solid fa-certificate"></i>
+                <h3>Certificações Gratuitas</h3>
+                <p>Provas totalmente custeadas por empresas que fecharem projetos com você.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Contato com Gestores</h3>
+                <p>Aprenda com profissionais experientes e conquiste novas oportunidades.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Projetos Reais</h3>
+                <p>Ganhe experiência prática que valoriza seu currículo antes da formatura.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="cta-area">
+        <a href="../categorias/forms/cadastro.html" class="cta-button">Quero Garantir Minha Vaga!</a>
+        <p class="note">As vagas dependem da disponibilidade das empresas parceiras. Não fique de fora!</p>
+    </section>
+
+    <footer>
+        &copy; 2025 Bridge Projects. Transformando estudantes em profissionais.
+    </footer>
+
+</body>
+</html>

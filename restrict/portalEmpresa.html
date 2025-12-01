@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal-cliente-aluno</title>
+    <link rel="stylesheet" href="/restrict/portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!--navegador da pagina-->
+    <header class="main-header">
+        <div class="container-nav">
+            <div class="hanburger">
+                <a href="#" id="menuToggle"><i class="fas fa-bars"></i></a>
+            </div>
+            <h1 class="logo"><a href="#">BRIDGE PROJECTS</a></h1>
+            <nav class="main-nav-sub" id="menu-opcoes">
+                <div class="search-bar">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                    <input type="text" placeholder="pesquisa por nome..." id="search-input">
+                </div>
+
+            </nav>
+            <a href="#" class="btn-nav encerrar primary" id="logout-button">Encerrar</a>
+        </div>
+    </header>
+    <!--fim do header navegador-->
+
+    <!--div que vai agrupar o aside e a main-->
+    <div class="portal-container">
+        <!--inicio do menu lateral-->
+        <aside class="sidebar" id="mySidebar">
+
+            <div class="user-profile">
+                <img id="profilePic" src="/restrict/uploads/Images.png" alt="adicione uma foto" class="profile-pic">
+                <input type="file" id="fileInput" accept="image/*" style="display:none">
+                <div class="user-info">
+                    <span class="name" id="userName"></span>
+                    <span class="title" id="userRole"></span>
+                </div>
+            </div>
+            <hr class="divisor">
+            <nav class="main-nav">
+                <ul class="nav-section">
+                    <li class="nav-item"><a href="#atividade"><i class="fas fa-history"></i> Atividade</a></li>
+                    <li class="nav-item active"><a href="#mainContent"><i class="fas fa-chart-line"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item"><a href="#menbros"><i class="fas fa-user-friends"></i> Membros</a></li>
+                    <li class="nav-item"><a href="#conpartilhamento"><i
+                                class="fas fa-share-alt"></i>Compartilhamentos</a></li>
+                    <li class="nav-item"><a href="#config"><i class="fas fa-cog"></i> Configurações</a></li>
+
+                    <li class="nav-item"><a href="notificações"><i class="fas fa-bell icon-btn"></i>Notificações</a>
+                    </li>
+                    <li class="nav-item"><a href="menssagens"><i class="fas fa-envelope icon-btn"></i>Menssagens</a>
+                    </li>
+                    <li class="nav-item"><a href="#excluir"><i class="fas fa-trash "></i>Excluir</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        <!--fim do aside -->
+
+        <!--inicio do main-->
+
+        <main class="main-content container-perfil" id="mainContent">
+            <h1 class="texto-principal">Bem-vindo ao Portal do Cliente:</h1>
+            <section class="perfil-gerente">
+                <div class="perfil-cliente">
+                    <h2>Seu Perfil</h2>
+                    <p><strong>Empresa:</strong> Cliente Exemplo S.A.</p>
+                    <p><strong>Contato:</strong> João da Silva</p>
+                    <p><strong>ID do Projeto:</strong> P-12345</p>
+                </div>
+
+                <div class="gerente-responsavel">
+                    <h2>Gerente Responsável</h2>
+                    <img src="image/perfil.jpg" alt="Foto do Gerente">
+                    <p><strong>Nome:</strong> Maria Souza</p>
+                    <p><strong>Contato:</strong> maria.souza@empresa.com</p>
+                </div>
+            </section>
+
+            <hr class="divisor">
+
+            <section id="area-aprovacao" class="area-aprovacao">
+                <h2>Proposta para Análise e Aprovação</h2>
+                <br>
+                <div class="proposta">
+                    <p><strong>Status:</strong> Aguardando sua aprovação</p>
+                    <br>
+                    <a href="#" class="btn-visualizar">Visualizar Proposta Completa (PDF)</a>
+                    <div class="campo-assinatura">
+                        <p>Ao clicar em "Aprovar Projeto", você assina e concorda com os termos da proposta.</p>
+                        <br>
+                        <input type="text" id="campoAssinatura" placeholder="Digite seu nome completo para assinar">
+                        <button id="btnAprovar" onclick="aprovarProjeto()">Aprovar Projeto e Iniciar Prazo</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="painel-andamento" class="painel-andamento hidden">
+                <div class="status-projeto">
+                    <h2>Andamento do Projeto</h2>
+                    <p><strong>Início do Prazo:</strong> <span id="dataInicioPrazo"></span></p>
+                    <br>
+                    <p><strong>Status Geral:</strong> <span class="tag-status">EM DESENVOLVIMENTO</span></p>
+                </div>
+
+                <div class="kanban-board">
+                    <div class="kanban-column" id="coluna-a-produzir">
+                        <h3>A Produzir</h3>
+                        <div class="task-card">Design de layout principal</div>
+                        <div class="task-card">Configuração do banco de dados</div>
+                    </div>
+
+                    <div class="kanban-column" id="coluna-em-desenvolvimento">
+                        <h3>Em Desenvolvimento</h3>
+                        <div class="task-card">Criação do módulo de login</div>
+                    </div>
+
+                    <div class="kanban-column" id="coluna-em-teste">
+                        <h3>Em Teste</h3>
+                        <div class="task-card">Validação do formulário de contato</div>
+                    </div>
+
+                    <div class="kanban-column" id="coluna-refazer">
+                        <h3>Refazer</h3>
+                    </div>
+
+                    <div class="kanban-column" id="coluna-concluido">
+                        <h3>Concluído</h3>
+                        <div class="task-card concluida">Wireframe da Home Page</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <!--fim do main-->
+
+    </div>
+    <!--fim da div de agrupamento-->
+
+    <script>
+        // Função principal para alternar o menu
+        function toggleMenu() {
+            // 1. Seleciona os elementos
+            const sidebar = document.getElementById('mySidebar');
+            const icon = document.querySelector('#menuToggle i'); // Seleciona o elemento <i> dentro do link
+            const mainContent = document.getElementById('mainContent');
+            // 2. Alterna a classe 'open' na sidebar
+            sidebar.classList.toggle('open');
+            mainContent.classList.toggle('pushed');
+            // 3. Verifica se a sidebar está aberta e muda o ícone
+            if (sidebar.classList.contains('open')) {
+                // Se estiver aberta, muda o ícone para 'X' (times)
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // 'fa-times' é o ícone de 'X' ou fechar
+            } else {
+                // Se estiver fechada, muda o ícone de volta para o hambúrguer
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+
+        // 4. Adiciona um "ouvinte de evento" ao link do hambúrguer
+        document.getElementById('menuToggle').addEventListener('click', function (event) {
+            event.preventDefault(); // Impede o link de navegar ou rolar para o topo
+            toggleMenu(); // Chama a função que faz toda a mágica
+        });
+
+        //logout da pagina
+        document.getElementById('logout-button').addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            try {
+                const response = await fetch('/alunos/logout', {
+                    method: 'POST', // Use POST ou GET, dependendo de como você configurou a rota
+                    // Não é necessário enviar headers de autenticação, pois o cookie será enviado automaticamente
+                });
+
+                // Não precisamos do JSON de resposta, apenas do status 200 (OK)
+                if (response.ok) {
+                    // 1. O servidor limpou o cookie
+
+                    // 2. Redireciona o usuário para a página inicial (pública)
+                    window.location.href = '/';
+                } else {
+                    alert('Erro ao fazer logout. Tente novamente.');
+                }
+            } catch (err) {
+                console.error('Erro de rede ou servidor:', err);
+                alert('Falha na conexão com o servidor.');
+            }
+        });
+
+        // acrescentando o nome e atributo do banco logado na pagina html
+        document.addEventListener("DOMContentLoaded", () => {
+            const nome = localStorage.getItem("usuario_nome");
+            const tipo = localStorage.getItem("usuario_tipo");
+
+            if (nome) {
+                document.getElementById("userName").textContent = `${nome} `;
+                document.getElementById("userRole").textContent = tipo.charAt(0).toUpperCase() + tipo.slice(1);
+            }
+        });
+
+        const profilePic = document.getElementById("profilePic");
+        const fileInput = document.getElementById("fileInput");
+
+        // Clicar na imagem abre o seletor
+        profilePic.addEventListener("click", () => fileInput.click());
+
+        // Quando o usuário escolhe a imagem
+        fileInput.addEventListener("change", async () => {
+            const file = fileInput.files[0];
+
+            if (!file) return;
+
+            // Previsualiza na hora
+            profilePic.src = URL.createObjectURL(file);
+
+            // Envia para o servidor
+            const formData = new FormData();
+            formData.append("foto", file);
+
+            const response = await fetch("upload_foto.php", {
+                method: "POST",
+                body: formData
+            });
+
+            const result = await response.text();
+            console.log(result);
+        });
+
+
+        /**
+     * Função chamada quando o cliente clica em "Aprovar Projeto"
+     */
+        function aprovarProjeto() {
+            const campoAssinatura = document.getElementById('campoAssinatura').value.trim();
+            const areaAprovacao = document.getElementById('area-aprovacao');
+            const painelAndamento = document.getElementById('painel-andamento');
+            const dataInicioPrazo = document.getElementById('dataInicioPrazo');
+
+            // 1. Validação da "Assinatura"
+            if (campoAssinatura === "") {
+                alert("Por favor, digite seu nome completo para assinar e aprovar a proposta.");
+                return;
+            }
+
+            // 2. Simula o registro da aprovação
+            const dataAtual = new Date();
+            const dataFormatada = dataAtual.toLocaleDateString('pt-BR');
+
+            // Alerta de sucesso
+            alert(`Proposta aprovada com sucesso por ${campoAssinatura} em ${dataFormatada}! O projeto será iniciado.`);
+
+            // 3. Oculta a área de aprovação
+            areaAprovacao.classList.add('hidden');
+
+            // 4. Exibe o painel de andamento (Kanban)
+            painelAndamento.classList.remove('hidden');
+
+            // 5. Define a data de início do prazo
+            dataInicioPrazo.textContent = dataFormatada;
+
+            // (Em um sistema real, aqui você enviaria os dados para o servidor)
+        }
+
+        // Opcional: Função para arrastar as tarefas (simulando o Trello)
+        // Esta é uma funcionalidade avançada que requer mais código,
+        // mas o layout já está pronto para recebê-la!	
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificados</title>
+     <link rel="stylesheet" href="/restrict/portal.css">
+</head>
+<body>
+    
+    <!-- HEADER padrão -->
+    <header class="header">
+
+        <div class="dashboard-title">Certificados</div>
+
+    </header>
+
+    <main class="conteudo">
+
+        <h1 class="titulo">Meus Certificados</h1>
+        <p class="subtitulo">Acompanhe seus certificados concluídos e os que estão em andamento.</p>
+
+        <!-- Navegação interna -->
+        <div class="switcher">
+            <a href="portalAluno.html">Meus Projetos</a>
+            <a href="/restrict/propostas.html">Propostas de Gerentes</a>
+            <a class="ativo">Meus Certificados</a>
+            <a href="historico.html">Histórico</a>
+        </div>
+
+        <!-- CERTIFICADO CONCLUÍDO -->
+        <div class="cert-card  proj-card">
+            <div class="cert-header">
+                <h2>Certificado Frontend Avançado</h2>
+                <span class="status finalizado">Concluído</span>
+            </div>
+
+            <p class="info"><strong>Data de Conclusão:</strong> 15 Dez 2024</p>
+
+            <div class="skills">
+                <span>React</span>
+                <span>UI/UX</span>
+                <span>JavaScript</span>
+            </div>
+
+            <button class="btn-ver">Baixar Certificado</button>
+        </div>
+
+        <!-- CERTIFICADO EM PROGRESSO -->
+        <div class="proj-card aguardando">
+            <div class="cert-header">
+                <h2>Certificação Full-Stack Developer</h2><br>
+                <span class="status andamento">Em Progresso</span>
+            </div>
+
+            <p class="info"><strong>Progresso:</strong> 45%</p>
+
+            <div class="barra">
+                <div class="barra-progresso" style="width: 45%;"></div>
+            </div>
+
+            <div class="skills">
+                <span>Node.js</span>
+                <span>APIs</span>
+                <span>PostgreSQL</span>
+            </div>
+
+            <button class="btn-detalhes">Ver Detalhes</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Bridge Projects. Projeto de Integração Universidade-Empresa. Todos os direitos
+                reservados.</p>
+        </footer>
+
+    </main>
+        <script src="js/homeAluno.js"></script>
+    </body>
+
+
+    

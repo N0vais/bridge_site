@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos Vinculados</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+
+<body>
+
+    <!-- HEADER padrão -->
+    <header class="header">
+        <div class="dashboard-title">Alunos Vinculados</div>
+
+    </header>
+
+    <main class="conteudo">
+
+        <h1 class="titulo">Alunos Vinculados</h1>
+        <p class="subtitulo">Veja todos os alunos associados aos seus projetos.</p>
+
+        <!-- SWITCHER PADRÃO -->
+        <div class="switcher">
+            <a href="portalGerente.html">Projetos</a>
+            <a class="ativo" >Alunos Vinculados</a>
+            <a href="propostas_gerente.html">Propostas</a>
+            <a href="historico_gerente.html">Histórico</a>
+        </div>
+
+        <!-- ========================= -->
+        <!-- ALUNO 1 -->
+        <div class="proj-card">
+            <div class="linha">
+                <h2>Gabriel Silva</h2>
+                <span class="tag">Ativo</span>
+            </div>
+
+            <p class="info">
+                Participa do projeto de Desenvolvimento Web como front-end júnior.
+            </p>
+
+            <button class="btn-ver" onclick="location.href='aluno_detalhes.html'">
+                Ver detalhes
+            </button>
+        </div>
+
+        <!-- ALUNO 2 -->
+        <div class="proj-card">
+            <div class="linha">
+                <h2>Maria Eduarda</h2>
+                <span class="tag">Em treinamento</span>
+            </div>
+
+            <p class="info">
+                Integrante do projeto de aplicativo mobile Bridge Internships.
+            </p>
+
+            <button class="btn-ver" onclick="location.href='aluno_detalhes.html'">
+                Ver detalhes
+            </button>
+        </div>
+
+        <!-- ALUNO 3 -->
+        <div class="proj-card">
+            <div class="linha">
+                <h2>Lucas Andrade</h2>
+                <span class="tag">Concluído</span>
+            </div>
+
+            <p class="info">
+                Finalizou sua participação no Sistema de Gestão Interna.
+            </p>
+
+            <button class="btn-ver" onclick="location.href='aluno_detalhes.html'">
+                Ver detalhes
+            </button>
+        </div>
+
+    </main>
+    <script src="js/homeAluno.js"></script>
+</body>
+
+</html>
